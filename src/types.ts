@@ -4,7 +4,6 @@ export interface Grader {
 
 export interface Benchmark {
     id: string;
-    name: string;
     prompt: string;
     grader: Grader;
 }
@@ -13,6 +12,7 @@ export interface BenchmarkResult {
     benchmarkId: string;
     modelName: string;
     response: string;
+    rawResponse: string; // Includes thinking tags
     passed: boolean;
     timeMs: number;
 }

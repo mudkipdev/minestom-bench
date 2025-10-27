@@ -1,93 +1,197 @@
 import type { Benchmark, BenchmarkResult, ModelResults } from "./types";
 import OpenAI from "openai";
 
+interface PersistedResults {
+    results: BenchmarkResult[];
+    lastUpdated: string;
+}
+
 export class BenchmarkRunner {
     private static requestQueue: Promise<void> = Promise.resolve();
     private static requestDelay = 5000;
+    private static resultsFile = "benchmark-results.json";
+    private persistedResults: Map<string, BenchmarkResult> = new Map();
 
     constructor(
         private benchmarks: Benchmark[],
         private modelIds: string[]
-    ) {}
+    ) {
+        this.loadPersistedResults();
+    }
+
+    private loadPersistedResults(): void {
+        try {
+            const fs = require("fs");
+            if (!fs.existsSync(BenchmarkRunner.resultsFile)) return;
+
+            const data = fs.readFileSync(BenchmarkRunner.resultsFile, "utf-8");
+            const parsed: PersistedResults = JSON.parse(data);
+
+            for (const result of parsed.results) {
+                const key = `${result.modelName}:${result.benchmarkId}`;
+                this.persistedResults.set(key, result);
+            }
+        } catch (error) {
+            console.error("Error loading persisted results:", error);
+        }
+    }
+
+    private async saveResult(result: BenchmarkResult): Promise<void> {
+        const key = `${result.modelName}:${result.benchmarkId}`;
+        this.persistedResults.set(key, result);
+
+        const allResults: BenchmarkResult[] = Array.from(this.persistedResults.values());
+        const data: PersistedResults = {
+            results: allResults,
+            lastUpdated: new Date().toISOString(),
+        };
+
+        await Bun.write(BenchmarkRunner.resultsFile, JSON.stringify(data, null, 2));
+    }
 
     async runAll(): Promise<ModelResults[]> {
-        console.log(
-            `Running ${this.benchmarks.length} benchmarks against ${this.modelIds.length} models in parallel...\n`
+        // Check if all results are already cached
+        const allCached = this.modelIds.every((modelId) =>
+            this.benchmarks.every((benchmark) => {
+                const key = `${modelId}:${benchmark.id}`;
+                return this.persistedResults.has(key);
+            })
         );
 
-        const allResults = await Promise.all(
-            this.modelIds.map((modelId) => this.runModelBenchmarks(modelId))
-        );
+        if (allCached) {
+            // All results cached, just return them
+            const allResults: ModelResults[] = [];
+            for (const modelId of this.modelIds) {
+                const results: BenchmarkResult[] = [];
+                for (const benchmark of this.benchmarks) {
+                    const key = `${modelId}:${benchmark.id}`;
+                    const cached = this.persistedResults.get(key)!;
+                    results.push(cached);
+                }
+                const passedCount = results.filter((r) => r.passed).length;
+                const passRate = (passedCount / results.length) * 100;
+                allResults.push({
+                    modelName: modelId,
+                    results,
+                    passRate,
+                });
+            }
+            return allResults;
+        }
+
+        // Run models sequentially
+        const allResults: ModelResults[] = [];
+        for (const modelId of this.modelIds) {
+            const result = await this.runModelBenchmarks(modelId);
+            allResults.push(result);
+        }
 
         return allResults;
     }
 
     private async runModelBenchmarks(modelId: string): Promise<ModelResults> {
-        console.log(`\nTesting model: ${modelId}`);
+        const promptGroups = new Map<string, Benchmark[]>();
+        for (const benchmark of this.benchmarks) {
+            const existing = promptGroups.get(benchmark.prompt) || [];
+            existing.push(benchmark);
+            promptGroups.set(benchmark.prompt, existing);
+        }
 
-        const results = await Promise.all(
-            this.benchmarks.map((benchmark) => this.runSingleBenchmark(modelId, benchmark))
+        // Check if this model needs any work
+        const needsWork = Array.from(promptGroups.values()).some((benchmarksGroup) =>
+            benchmarksGroup.some((b) => {
+                const key = `${modelId}:${b.id}`;
+                return !this.persistedResults.has(key);
+            })
         );
 
-        for (let i = 0; i < results.length; i++) {
-            const result = results[i];
-            const benchmark = this.benchmarks[i];
-            if (result == undefined || benchmark == undefined) continue;
+        if (needsWork) {
+            console.log(`\x1b[90m\n━━━ Benchmarking ${modelId} ━━━\x1b[0m`);
+        }
 
-            if (result.passed) {
-                console.log(`\x1b[32m  ✓ ${benchmark.name}\x1b[0m`);
-            } else {
-                console.log(`\x1b[31m  ✗ ${benchmark.name} (${result.response})\x1b[0m`);
+        const results: BenchmarkResult[] = [];
+
+        for (const [prompt, benchmarksGroup] of promptGroups) {
+            // Check if all benchmarks in this group are already cached
+            const allCached = benchmarksGroup.every((b) => {
+                const key = `${modelId}:${b.id}`;
+                return this.persistedResults.has(key);
+            });
+
+            if (allCached) {
+                // Use cached results
+                for (const benchmark of benchmarksGroup) {
+                    const key = `${modelId}:${benchmark.id}`;
+                    const cached = this.persistedResults.get(key)!;
+                    results.push(cached);
+                }
+                continue;
+            }
+
+            const startTime = performance.now();
+            try {
+                const rawResponse = await this.callModel(modelId, prompt);
+                const response = this.cleanResponse(rawResponse);
+                const endTime = performance.now();
+
+                for (const benchmark of benchmarksGroup) {
+                    const passed = await benchmark.grader.grade(response);
+                    const result: BenchmarkResult = {
+                        benchmarkId: benchmark.id,
+                        modelName: modelId,
+                        response,
+                        rawResponse,
+                        passed,
+                        timeMs: endTime - startTime,
+                    };
+                    results.push(result);
+                    await this.saveResult(result);
+                }
+            } catch (error) {
+                const endTime = performance.now();
+                console.error(`Error running prompt group:`, error);
+
+                for (const benchmark of benchmarksGroup) {
+                    const result: BenchmarkResult = {
+                        benchmarkId: benchmark.id,
+                        modelName: modelId,
+                        response: "",
+                        rawResponse: "",
+                        passed: false,
+                        timeMs: endTime - startTime,
+                    };
+                    results.push(result);
+                    await this.saveResult(result);
+                }
             }
         }
+
+        const sortedResults = this.benchmarks.map((benchmark) =>
+            results.find((r) => r.benchmarkId === benchmark.id)
+        );
 
         const passedCount = results.filter((r) => r.passed).length;
         const passRate = (passedCount / results.length) * 100;
 
-        console.log(`  Pass rate: ${passRate.toFixed(1)}%`);
-
         return {
             modelName: modelId,
-            results,
+            results: sortedResults.filter((r) => r !== undefined) as BenchmarkResult[],
             passRate,
         };
     }
 
-    private async runSingleBenchmark(
-        modelId: string,
-        benchmark: Benchmark
-    ): Promise<BenchmarkResult> {
-        const startTime = performance.now();
-
-        try {
-            const rawResponse = await this.callModel(modelId, benchmark.prompt);
-            const response = this.cleanResponse(rawResponse);
-            const passed = await benchmark.grader.grade(response);
-            const endTime = performance.now();
-
-            return {
-                benchmarkId: benchmark.id,
-                modelName: modelId,
-                response,
-                passed,
-                timeMs: endTime - startTime,
-            };
-        } catch (error) {
-            const endTime = performance.now();
-            console.error(`Error running benchmark ${benchmark.id}:`, error);
-
-            return {
-                benchmarkId: benchmark.id,
-                modelName: modelId,
-                response: "",
-                passed: false,
-                timeMs: endTime - startTime,
-            };
-        }
-    }
-
     private cleanResponse(response: string): string {
         let cleaned = response.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+
+        // Extract content from markdown code blocks (```java code```, ``` code ```, etc.)
+        cleaned = cleaned.replace(/```[a-z]*\n?([\s\S]*?)```/g, "$1").trim();
+
+        // Strip inline code backticks
+        cleaned = cleaned.replace(/`([^`]+)`/g, "$1");
+
+        // If there's still content wrapped in backticks, remove them
+        cleaned = cleaned.replace(/^`+|`+$/g, "").trim();
+
         return cleaned;
     }
 
@@ -112,7 +216,7 @@ export class BenchmarkRunner {
                         content: prompt,
                     },
                 ],
-                max_tokens: 1000,
+                max_tokens: 10000,
             });
 
             return response.choices[0]?.message?.content?.trim() || "";
@@ -130,12 +234,30 @@ export class BenchmarkRunner {
 
         const sorted = [...allResults].sort((a, b) => b.passRate - a.passRate);
 
+        // Find the longest model name for alignment
+        const maxNameLength = Math.max(...sorted.map(r => r?.modelName?.length || 0));
+
         for (let i = 0; i < sorted.length; i++) {
             const result = sorted[i];
             if (result == undefined) continue;
-            summary += `${i + 1}. ${result.modelName}\n`;
-            summary += `   Pass Rate: ${result.passRate.toFixed(1)}%\n`;
-            summary += `   Passed: ${result.results.filter((r) => r.passed).length}/${result.results.length}\n\n`;
+
+            // Create visual bar chart
+            const barLength = 50;
+            const filledLength = Math.round((result.passRate / 100) * barLength);
+            const emptyLength = barLength - filledLength;
+            const bar = "█".repeat(filledLength) + "░".repeat(emptyLength);
+
+            // Color the bar based on pass rate
+            let colorCode = "\x1b[31m"; // red
+            if (result.passRate >= 80) colorCode = "\x1b[32m"; // green
+            else if (result.passRate >= 60) colorCode = "\x1b[33m"; // yellow
+
+            const paddedName = result.modelName.padEnd(maxNameLength);
+            const percentage = result.passRate.toFixed(1).padStart(5);
+            const passed = result.results.filter((r) => r.passed).length;
+            const total = result.results.length;
+
+            summary += `${paddedName} ${colorCode}${bar}\x1b[0m ${percentage}% (${passed}/${total})\n`;
         }
 
         return summary;
