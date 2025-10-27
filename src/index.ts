@@ -6,6 +6,7 @@ async function main() {
     const runner = new BenchmarkRunner(benchmarks, models);
     const results = await runner.runAll();
     console.log(BenchmarkRunner.getSummary(results));
+    await BenchmarkRunner.updateReadme(results);
 }
 
 main().catch(console.error);

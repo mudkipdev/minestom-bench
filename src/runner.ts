@@ -229,7 +229,7 @@ export class BenchmarkRunner {
         }
     }
 
-    static getSummary(allResults: ModelResults[]): string {
+    static getSummary(allResults: ModelResults[], colored: boolean = true): string {
         let summary = "\n=== BENCHMARK SUMMARY ===\n\n";
 
         const sorted = [...allResults].sort((a, b) => b.passRate - a.passRate);
@@ -247,19 +247,45 @@ export class BenchmarkRunner {
             const emptyLength = barLength - filledLength;
             const bar = "█".repeat(filledLength) + "░".repeat(emptyLength);
 
-            // Color the bar based on pass rate
-            let colorCode = "\x1b[31m"; // red
-            if (result.passRate >= 80) colorCode = "\x1b[32m"; // green
-            else if (result.passRate >= 60) colorCode = "\x1b[33m"; // yellow
+            // Color the bar based on pass rate (only if colored is true)
+            let colorCode = "";
+            let resetCode = "";
+            if (colored) {
+                if (result.passRate >= 80) colorCode = "\x1b[32m"; // green
+                else if (result.passRate >= 60) colorCode = "\x1b[33m"; // yellow
+                else colorCode = "\x1b[31m"; // red
+                resetCode = "\x1b[0m";
+            }
 
             const paddedName = result.modelName.padEnd(maxNameLength);
             const percentage = result.passRate.toFixed(1).padStart(5);
             const passed = result.results.filter((r) => r.passed).length;
             const total = result.results.length;
 
-            summary += `${paddedName} ${colorCode}${bar}\x1b[0m ${percentage}% (${passed}/${total})\n`;
+            summary += `${paddedName} ${colorCode}${bar}${resetCode} ${percentage}% (${passed}/${total})\n`;
         }
 
         return summary;
+    }
+
+    static async updateReadme(allResults: ModelResults[]): Promise<void> {
+        const fs = require("fs");
+        const readmePath = ".github/README.md";
+
+        if (!fs.existsSync(readmePath)) {
+            console.error("README.md not found");
+            return;
+        }
+
+        const readmeContent = fs.readFileSync(readmePath, "utf-8");
+        const summary = BenchmarkRunner.getSummary(allResults, false);
+
+        // Replace the content between ```\n and \n```
+        const updated = readmeContent.replace(
+            /```\n[\s\S]*?\n```/,
+            `\`\`\`\n${summary}\n\`\`\``
+        );
+
+        await Bun.write(readmePath, updated);
     }
 }
