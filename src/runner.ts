@@ -229,8 +229,12 @@ export class BenchmarkRunner {
         }
     }
 
-    static getSummary(allResults: ModelResults[], colored: boolean = true): string {
-        let summary = "\n=== BENCHMARK SUMMARY ===\n\n";
+    static getSummary(allResults: ModelResults[], colored: boolean = true, includeHeader: boolean = true): string {
+        let summary = "";
+
+        if (includeHeader) {
+            summary = "\n=== BENCHMARK SUMMARY ===\n\n";
+        }
 
         const sorted = [...allResults].sort((a, b) => b.passRate - a.passRate);
 
@@ -278,7 +282,7 @@ export class BenchmarkRunner {
         }
 
         const readmeContent = fs.readFileSync(readmePath, "utf-8");
-        const summary = BenchmarkRunner.getSummary(allResults, false);
+        const summary = BenchmarkRunner.getSummary(allResults, false, false).trim();
 
         // Replace the content between ```\n and \n```
         const updated = readmeContent.replace(
