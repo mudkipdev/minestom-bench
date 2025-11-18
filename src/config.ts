@@ -5,8 +5,12 @@ export const models = [
     // Proprietary
     "openai/gpt-5",
     "openai/gpt-5-codex",
+    "openai/gpt-5.1",
+    "openai/gpt-5.1-codex",
+    "openai/gpt-5.1-codex-mini",
     "anthropic/claude-sonnet-4.5",
     "anthropic/claude-haiku-4.5",
+    "google/gemini-3-pro-preview",
     "google/gemini-2.5-pro",
     "google/gemini-2.5-flash",
     "x-ai/grok-4-fast",

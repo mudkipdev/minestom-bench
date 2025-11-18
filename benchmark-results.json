@@ -4359,7 +4359,1295 @@
       "rawResponse": "EntityType.ARMOR_STAND",
       "passed": false,
       "timeMs": 4844.7492499999935
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.audience.Audience",
+      "rawResponse": "net.kyori.adventure.audience.Audience",
+      "passed": true,
+      "timeMs": 1699.67725
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.key.Key",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.key.Key",
+      "rawResponse": "net.kyori.adventure.key.Key",
+      "passed": true,
+      "timeMs": 4214.844084
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "rawResponse": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "passed": true,
+      "timeMs": 5225.106458
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.Component",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.text.Component",
+      "rawResponse": "net.kyori.adventure.text.Component",
+      "passed": true,
+      "timeMs": 4876.574833000001
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "rawResponse": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "passed": true,
+      "timeMs": 4963.224124999999
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "passed": true,
+      "timeMs": 5561.768916999998
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "passed": true,
+      "timeMs": 4645.418959000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.MinecraftServer",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.MinecraftServer",
+      "rawResponse": "net.minestom.server.MinecraftServer",
+      "passed": true,
+      "timeMs": 5347.373625
+    },
+    {
+      "benchmarkId": "net.minestom.server.command.builder.Command",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.command.builder.Command",
+      "rawResponse": "net.minestom.server.command.builder.Command",
+      "passed": true,
+      "timeMs": 4821.188541000003
+    },
+    {
+      "benchmarkId": "net.minestom.server.component.DataComponents",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.item.components.DataComponents",
+      "rawResponse": "net.minestom.server.item.components.DataComponents",
+      "passed": false,
+      "timeMs": 4711.345207999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.EntityCreature",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.entity.EntityCreature",
+      "rawResponse": "net.minestom.server.entity.EntityCreature",
+      "passed": true,
+      "timeMs": 5345.518124999995
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.Player",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.entity.Player",
+      "rawResponse": "net.minestom.server.entity.Player",
+      "passed": true,
+      "timeMs": 4795.3892080000005
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "rawResponse": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "passed": true,
+      "timeMs": 4943.127541000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.EventListener",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.event.EventListener",
+      "rawResponse": "net.minestom.server.event.EventListener",
+      "passed": true,
+      "timeMs": 5829.014374999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "rawResponse": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "passed": true,
+      "timeMs": 4172.887208
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "rawResponse": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 4949.664875000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "rawResponse": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 4740.6912500000035
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.InstanceContainer",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.instance.InstanceContainer",
+      "rawResponse": "net.minestom.server.instance.InstanceContainer",
+      "passed": true,
+      "timeMs": 5156.913667000001
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.anvil.AnvilLoader",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.instance.loader.AnvilLoader",
+      "rawResponse": "net.minestom.server.instance.loader.AnvilLoader",
+      "passed": false,
+      "timeMs": 5032.608500000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.item.ItemStack",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.item.ItemStack",
+      "rawResponse": "net.minestom.server.item.ItemStack",
+      "passed": true,
+      "timeMs": 5215.633333999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.inventory.Inventory",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.inventory.Inventory",
+      "rawResponse": "net.minestom.server.inventory.Inventory",
+      "passed": true,
+      "timeMs": 4853.3787500000035
+    },
+    {
+      "benchmarkId": "net.minestom.server.scoreboard.Sidebar",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.scoreboard.Sidebar",
+      "rawResponse": "net.minestom.server.scoreboard.Sidebar",
+      "passed": true,
+      "timeMs": 5003.409625
+    },
+    {
+      "benchmarkId": "net.minestom.server.tag.Tag",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "net.minestom.server.tag.Tag",
+      "rawResponse": "net.minestom.server.tag.Tag",
+      "passed": true,
+      "timeMs": 5016.242916999996
+    },
+    {
+      "benchmarkId": "enable-authentication",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "MinecraftServer.getExtensionManager().loadExtension(\"net.minestom.server.extras.mojangAuth.MojangAuth\");",
+      "rawResponse": "MinecraftServer.getExtensionManager().loadExtension(\"net.minestom.server.extras.mojangAuth.MojangAuth\");",
+      "passed": false,
+      "timeMs": 5510.332916999992
+    },
+    {
+      "benchmarkId": "configuration-phase-event",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "PlayerClientConfigurationEvent",
+      "rawResponse": "PlayerClientConfigurationEvent",
+      "passed": false,
+      "timeMs": 4319.240333000009
+    },
+    {
+      "benchmarkId": "gamemode-change-event",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "PlayerSpawnEvent",
+      "rawResponse": "PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 4877.550082999995
+    },
+    {
+      "benchmarkId": "motd-event",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "ServerListPingEvent",
+      "rawResponse": "ServerListPingEvent",
+      "passed": true,
+      "timeMs": 5058.457957999999
+    },
+    {
+      "benchmarkId": "player-head-skin-component",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "DataComponents.PROFILE",
+      "rawResponse": "DataComponents.PROFILE",
+      "passed": true,
+      "timeMs": 5144.585707999999
+    },
+    {
+      "benchmarkId": "enable-lighting",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "instance.enableAutoChunkLoad(true);",
+      "rawResponse": "instance.enableAutoChunkLoad(true);",
+      "passed": false,
+      "timeMs": 4922.346833000018
+    },
+    {
+      "benchmarkId": "join-components-method",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "Component.join\nI’m sorry, that is not correct.\n\nThe correct Adventure method to join two components together without style bleeding is:\n\nComponent.join()",
+      "rawResponse": "Component.join\nI’m sorry, that is not correct.\n\nThe correct Adventure method to join two components together without style bleeding is:\n\nComponent.join()",
+      "passed": false,
+      "timeMs": 6113.857750000025
+    },
+    {
+      "benchmarkId": "blockvec",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "BlockVector\nCorrection: Minestom uses IntegerPosition (and also Position) to represent block coordinates specifically. BlockVector is an Adventure class, but for Minestom block positions the appropriate Point implementation is IntegerPosition.\nIntegerPosition",
+      "rawResponse": "BlockVector\nCorrection: Minestom uses IntegerPosition (and also Position) to represent block coordinates specifically. BlockVector is an Adventure class, but for Minestom block positions the appropriate Point implementation is IntegerPosition.\nIntegerPosition",
+      "passed": true,
+      "timeMs": 5315.847083000001
+    },
+    {
+      "benchmarkId": "holograms",
+      "modelName": "openrouter/polaris-alpha",
+      "response": "EntityType.ARMOR_STAND",
+      "rawResponse": "EntityType.ARMOR_STAND",
+      "passed": false,
+      "timeMs": 3722.4481249999953
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "openai/gpt-5-codex-mini",
+      "response": "",
+      "rawResponse": "",
+      "passed": false,
+      "timeMs": 454.654667
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.audience.Audience",
+      "rawResponse": "net.kyori.adventure.audience.Audience",
+      "passed": true,
+      "timeMs": 4409.496999999999
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.key.Key",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.key.Key",
+      "rawResponse": "net.kyori.adventure.key.Key",
+      "passed": true,
+      "timeMs": 3905.4900420000004
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "rawResponse": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "passed": true,
+      "timeMs": 6260.700417
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.Component",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.text.Component",
+      "rawResponse": "net.kyori.adventure.text.Component",
+      "passed": true,
+      "timeMs": 3650.4254170000004
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "rawResponse": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "passed": true,
+      "timeMs": 4010.306790999999
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "passed": true,
+      "timeMs": 4556.892166999998
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "passed": true,
+      "timeMs": 7287.220499999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.MinecraftServer",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.MinecraftServer",
+      "rawResponse": "net.minestom.server.MinecraftServer",
+      "passed": true,
+      "timeMs": 3329.864125
+    },
+    {
+      "benchmarkId": "net.minestom.server.command.builder.Command",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.command.builder.Command",
+      "rawResponse": "net.minestom.server.command.builder.Command",
+      "passed": true,
+      "timeMs": 7116.596790999996
+    },
+    {
+      "benchmarkId": "net.minestom.server.component.DataComponents",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.item.component.DataComponents",
+      "rawResponse": "net.minestom.server.item.component.DataComponents",
+      "passed": false,
+      "timeMs": 11158.286708
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.EntityCreature",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.entity.EntityCreature",
+      "rawResponse": "net.minestom.server.entity.EntityCreature",
+      "passed": true,
+      "timeMs": 4435.122374999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.Player",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.entity.Player",
+      "rawResponse": "net.minestom.server.entity.Player",
+      "passed": true,
+      "timeMs": 1857.6606670000037
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "rawResponse": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "passed": true,
+      "timeMs": 5715.631875000006
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.EventListener",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.event.EventListener",
+      "rawResponse": "net.minestom.server.event.EventListener",
+      "passed": true,
+      "timeMs": 6693.904458999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "rawResponse": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "passed": true,
+      "timeMs": 6051.9846670000115
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "rawResponse": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 1810.7891660000023
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "rawResponse": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 6445.614291999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.InstanceContainer",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.instance.InstanceContainer",
+      "rawResponse": "net.minestom.server.instance.InstanceContainer",
+      "passed": true,
+      "timeMs": 3810.457582999996
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.anvil.AnvilLoader",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.storage.AnvilLoader",
+      "rawResponse": "net.minestom.server.storage.AnvilLoader",
+      "passed": false,
+      "timeMs": 5934.926084000006
+    },
+    {
+      "benchmarkId": "net.minestom.server.item.ItemStack",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.item.ItemStack",
+      "rawResponse": "net.minestom.server.item.ItemStack",
+      "passed": true,
+      "timeMs": 5846.561667000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.inventory.Inventory",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.inventory.Inventory",
+      "rawResponse": "net.minestom.server.inventory.Inventory",
+      "passed": true,
+      "timeMs": 5091.7927920000075
+    },
+    {
+      "benchmarkId": "net.minestom.server.scoreboard.Sidebar",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.scoreboard.Sidebar",
+      "rawResponse": "net.minestom.server.scoreboard.Sidebar",
+      "passed": true,
+      "timeMs": 6013.675667000003
+    },
+    {
+      "benchmarkId": "net.minestom.server.tag.Tag",
+      "modelName": "openai/gpt-5.1",
+      "response": "net.minestom.server.tag.Tag",
+      "rawResponse": "net.minestom.server.tag.Tag",
+      "passed": true,
+      "timeMs": 4646.198084000003
+    },
+    {
+      "benchmarkId": "enable-authentication",
+      "modelName": "openai/gpt-5.1",
+      "response": "MojangAuth.init(MinecraftServer.getConnectionManager());",
+      "rawResponse": "MojangAuth.init(MinecraftServer.getConnectionManager());",
+      "passed": false,
+      "timeMs": 28375.816625000007
+    },
+    {
+      "benchmarkId": "configuration-phase-event",
+      "modelName": "openai/gpt-5.1",
+      "response": "PlayerConfigurationEvent",
+      "rawResponse": "PlayerConfigurationEvent",
+      "passed": false,
+      "timeMs": 7587.189874999982
+    },
+    {
+      "benchmarkId": "gamemode-change-event",
+      "modelName": "openai/gpt-5.1",
+      "response": "PlayerSpawnEvent",
+      "rawResponse": "PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 14712.884249999974
+    },
+    {
+      "benchmarkId": "motd-event",
+      "modelName": "openai/gpt-5.1",
+      "response": "ServerListPingEvent",
+      "rawResponse": "ServerListPingEvent",
+      "passed": true,
+      "timeMs": 3940.0491249999905
+    },
+    {
+      "benchmarkId": "player-head-skin-component",
+      "modelName": "openai/gpt-5.1",
+      "response": "DataComponents.PROFILE",
+      "rawResponse": "DataComponents.PROFILE",
+      "passed": true,
+      "timeMs": 3088.2258750000037
+    },
+    {
+      "benchmarkId": "enable-lighting",
+      "modelName": "openai/gpt-5.1",
+      "response": "instance.setChunkSupplier(LightingChunk::new);",
+      "rawResponse": "instance.setChunkSupplier(LightingChunk::new);",
+      "passed": true,
+      "timeMs": 17010.45849999998
+    },
+    {
+      "benchmarkId": "join-components-method",
+      "modelName": "openai/gpt-5.1",
+      "response": "join",
+      "rawResponse": "join",
+      "passed": false,
+      "timeMs": 9640.629583000002
+    },
+    {
+      "benchmarkId": "blockvec",
+      "modelName": "openai/gpt-5.1",
+      "response": "Vec",
+      "rawResponse": "Vec",
+      "passed": false,
+      "timeMs": 7896.986749999982
+    },
+    {
+      "benchmarkId": "holograms",
+      "modelName": "openai/gpt-5.1",
+      "response": "EntityType.ARMOR_STAND",
+      "rawResponse": "EntityType.ARMOR_STAND",
+      "passed": false,
+      "timeMs": 5760.752166999999
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.audience.Audience",
+      "rawResponse": "net.kyori.adventure.audience.Audience",
+      "passed": true,
+      "timeMs": 2276.050500000012
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.key.Key",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.key.Key",
+      "rawResponse": "net.kyori.adventure.key.Key",
+      "passed": true,
+      "timeMs": 11156.237208999984
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "rawResponse": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "passed": true,
+      "timeMs": 1912.0182909999858
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.Component",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.text.Component",
+      "rawResponse": "net.kyori.adventure.text.Component",
+      "passed": true,
+      "timeMs": 5189.838583000004
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "rawResponse": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "passed": true,
+      "timeMs": 4096.932459000003
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "passed": true,
+      "timeMs": 5783.905250000011
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "passed": true,
+      "timeMs": 4861.132666999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.MinecraftServer",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.MinecraftServer",
+      "rawResponse": "net.minestom.server.MinecraftServer",
+      "passed": true,
+      "timeMs": 4855.737499999988
+    },
+    {
+      "benchmarkId": "net.minestom.server.command.builder.Command",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.command.builder.Command",
+      "rawResponse": "net.minestom.server.command.builder.Command",
+      "passed": true,
+      "timeMs": 5832.740375000023
+    },
+    {
+      "benchmarkId": "net.minestom.server.component.DataComponents",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.item.component.DataComponents",
+      "rawResponse": "net.minestom.server.item.component.DataComponents",
+      "passed": false,
+      "timeMs": 5223.372792000009
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.EntityCreature",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.entity.EntityCreature",
+      "rawResponse": "net.minestom.server.entity.EntityCreature",
+      "passed": true,
+      "timeMs": 4301.9235409999965
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.Player",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.entity.Player",
+      "rawResponse": "net.minestom.server.entity.Player",
+      "passed": true,
+      "timeMs": 5227.750208000012
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "rawResponse": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "passed": true,
+      "timeMs": 7349.435582999955
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.EventListener",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.event.EventListener",
+      "rawResponse": "net.minestom.server.event.EventListener",
+      "passed": true,
+      "timeMs": 2924.58941700001
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "rawResponse": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "passed": true,
+      "timeMs": 4641.997333999956
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "rawResponse": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 4466.205000000016
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "rawResponse": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 5331.1264159999555
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.InstanceContainer",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.instance.InstanceContainer",
+      "rawResponse": "net.minestom.server.instance.InstanceContainer",
+      "passed": true,
+      "timeMs": 4604.258749999979
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.anvil.AnvilLoader",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.instance.AnvilLoader",
+      "rawResponse": "net.minestom.server.instance.AnvilLoader",
+      "passed": false,
+      "timeMs": 5732.009582999977
+    },
+    {
+      "benchmarkId": "net.minestom.server.item.ItemStack",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.item.ItemStack",
+      "rawResponse": "net.minestom.server.item.ItemStack",
+      "passed": true,
+      "timeMs": 4384.16174999997
+    },
+    {
+      "benchmarkId": "net.minestom.server.inventory.Inventory",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.inventory.Inventory",
+      "rawResponse": "net.minestom.server.inventory.Inventory",
+      "passed": true,
+      "timeMs": 5357.29583300004
+    },
+    {
+      "benchmarkId": "net.minestom.server.scoreboard.Sidebar",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.scoreboard.Sidebar",
+      "rawResponse": "net.minestom.server.scoreboard.Sidebar",
+      "passed": true,
+      "timeMs": 5716.720499999996
+    },
+    {
+      "benchmarkId": "net.minestom.server.tag.Tag",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "net.minestom.server.tag.Tag",
+      "rawResponse": "net.minestom.server.tag.Tag",
+      "passed": true,
+      "timeMs": 4007.7946249999804
+    },
+    {
+      "benchmarkId": "enable-authentication",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "Authentication.init();",
+      "rawResponse": "Authentication.init();",
+      "passed": false,
+      "timeMs": 8022.276249999995
+    },
+    {
+      "benchmarkId": "configuration-phase-event",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "PlayerClientConfigRequestEvent",
+      "rawResponse": "PlayerClientConfigRequestEvent",
+      "passed": false,
+      "timeMs": 2407.3982079999987
+    },
+    {
+      "benchmarkId": "gamemode-change-event",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "PlayerSpawnEvent",
+      "rawResponse": "PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 6226.8070830000215
+    },
+    {
+      "benchmarkId": "motd-event",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "ServerListPingEvent",
+      "rawResponse": "ServerListPingEvent",
+      "passed": true,
+      "timeMs": 6101.596958999988
+    },
+    {
+      "benchmarkId": "player-head-skin-component",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "DataComponents.PROFILE",
+      "rawResponse": "DataComponents.PROFILE",
+      "passed": true,
+      "timeMs": 2752.9820419999887
+    },
+    {
+      "benchmarkId": "enable-lighting",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "instance.enableAutoChunkLighting(true);",
+      "rawResponse": "instance.enableAutoChunkLighting(true);",
+      "passed": false,
+      "timeMs": 9995.279875000007
+    },
+    {
+      "benchmarkId": "join-components-method",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "Component.join",
+      "rawResponse": "Component.join",
+      "passed": false,
+      "timeMs": 9592.568040999991
+    },
+    {
+      "benchmarkId": "blockvec",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "BlockVec",
+      "rawResponse": "BlockVec",
+      "passed": true,
+      "timeMs": 2727.554582999961
+    },
+    {
+      "benchmarkId": "holograms",
+      "modelName": "openai/gpt-5.1-codex",
+      "response": "EntityType.ARMOR_STAND",
+      "rawResponse": "EntityType.ARMOR_STAND",
+      "passed": false,
+      "timeMs": 5579.435583000013
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.audience.Audience",
+      "rawResponse": "net.kyori.adventure.audience.Audience",
+      "passed": true,
+      "timeMs": 4808.7744999999995
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.key.Key",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.key.Key",
+      "rawResponse": "net.kyori.adventure.key.Key",
+      "passed": true,
+      "timeMs": 4686.424875000026
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "rawResponse": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "passed": true,
+      "timeMs": 5148.582791999972
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.Component",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.text.Component",
+      "rawResponse": "net.kyori.adventure.text.Component",
+      "passed": true,
+      "timeMs": 4275.709708000009
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "rawResponse": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "passed": true,
+      "timeMs": 5215.994166999997
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "passed": true,
+      "timeMs": 5406.3493339999695
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "passed": true,
+      "timeMs": 4697.347499999974
+    },
+    {
+      "benchmarkId": "net.minestom.server.MinecraftServer",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.MinecraftServer",
+      "rawResponse": "net.minestom.server.MinecraftServer",
+      "passed": true,
+      "timeMs": 5222.978750000009
+    },
+    {
+      "benchmarkId": "net.minestom.server.command.builder.Command",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.command.builder.Command",
+      "rawResponse": "net.minestom.server.command.builder.Command",
+      "passed": true,
+      "timeMs": 5157.010000000009
+    },
+    {
+      "benchmarkId": "net.minestom.server.component.DataComponents",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.data.DataComponents",
+      "rawResponse": "net.minestom.server.data.DataComponents",
+      "passed": false,
+      "timeMs": 6126.562749999983
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.EntityCreature",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.entity.EntityCreature",
+      "rawResponse": "net.minestom.server.entity.EntityCreature",
+      "passed": true,
+      "timeMs": 4458.8196670000325
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.Player",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.entity.Player",
+      "rawResponse": "net.minestom.server.entity.Player",
+      "passed": true,
+      "timeMs": 4052.4596250000177
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.text.TextDisplayMeta",
+      "rawResponse": "net.kyori.adventure.text.TextDisplayMeta",
+      "passed": false,
+      "timeMs": 7647.283667000011
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.EventListener",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.event.EventListener",
+      "rawResponse": "net.minestom.event.EventListener",
+      "passed": false,
+      "timeMs": 4818.321042000025
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "rawResponse": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "passed": true,
+      "timeMs": 3258.567374999984
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "rawResponse": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 6049.136832999997
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "rawResponse": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 4166.005166999996
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.InstanceContainer",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.instance.InstanceContainer",
+      "rawResponse": "net.minestom.server.instance.InstanceContainer",
+      "passed": true,
+      "timeMs": 4595.375417000032
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.anvil.AnvilLoader",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.storage.anvil.AnvilLoader",
+      "rawResponse": "net.minestom.server.storage.anvil.AnvilLoader",
+      "passed": false,
+      "timeMs": 6230.082874999964
+    },
+    {
+      "benchmarkId": "net.minestom.server.item.ItemStack",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.item.ItemStack",
+      "rawResponse": "net.minestom.server.item.ItemStack",
+      "passed": true,
+      "timeMs": 3901.585334000003
+    },
+    {
+      "benchmarkId": "net.minestom.server.inventory.Inventory",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.inventory.Inventory",
+      "rawResponse": "net.minestom.server.inventory.Inventory",
+      "passed": true,
+      "timeMs": 5854.097542000003
+    },
+    {
+      "benchmarkId": "net.minestom.server.scoreboard.Sidebar",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.minestom.server.scoreboard.Sidebar",
+      "rawResponse": "net.minestom.server.scoreboard.Sidebar",
+      "passed": true,
+      "timeMs": 4890.88274999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.tag.Tag",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "net.kyori.adventure.tag.Tag",
+      "rawResponse": "net.kyori.adventure.tag.Tag",
+      "passed": false,
+      "timeMs": 4384.372499999998
+    },
+    {
+      "benchmarkId": "enable-authentication",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "MojangAuth.enable();",
+      "rawResponse": "MojangAuth.enable();",
+      "passed": false,
+      "timeMs": 15501.929250000045
+    },
+    {
+      "benchmarkId": "configuration-phase-event",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "ClientConfigurationEvent",
+      "rawResponse": "ClientConfigurationEvent",
+      "passed": false,
+      "timeMs": 16673.03133300005
+    },
+    {
+      "benchmarkId": "gamemode-change-event",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "PlayerSpawnEvent",
+      "rawResponse": "PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 8801.775082999957
+    },
+    {
+      "benchmarkId": "motd-event",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "ServerListPingEvent",
+      "rawResponse": "ServerListPingEvent",
+      "passed": true,
+      "timeMs": 2145.854874999961
+    },
+    {
+      "benchmarkId": "player-head-skin-component",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "DataComponents.GAME_PROFILE",
+      "rawResponse": "DataComponents.GAME_PROFILE",
+      "passed": false,
+      "timeMs": 17109.541084000026
+    },
+    {
+      "benchmarkId": "enable-lighting",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "MinecraftServer.getLightingManager().setEnabled(true);",
+      "rawResponse": "MinecraftServer.getLightingManager().setEnabled(true);",
+      "passed": false,
+      "timeMs": 40121.29908400006
+    },
+    {
+      "benchmarkId": "join-components-method",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "join",
+      "rawResponse": "join",
+      "passed": false,
+      "timeMs": 3900.2218329999596
+    },
+    {
+      "benchmarkId": "blockvec",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "BlockPosition",
+      "rawResponse": "BlockPosition",
+      "passed": false,
+      "timeMs": 7975.874625000055
+    },
+    {
+      "benchmarkId": "holograms",
+      "modelName": "openai/gpt-5.1-codex-mini",
+      "response": "EntityType.ARMOR_STAND",
+      "rawResponse": "EntityType.ARMOR_STAND",
+      "passed": false,
+      "timeMs": 1382.2123339999234
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.audience.Audience",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.audience.Audience",
+      "rawResponse": "net.kyori.adventure.audience.Audience",
+      "passed": true,
+      "timeMs": 5576.020709
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.key.Key",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.key.Key",
+      "rawResponse": "net.kyori.adventure.key.Key",
+      "passed": true,
+      "timeMs": 4695.979874999999
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "rawResponse": "net.kyori.adventure.nbt.CompoundBinaryTag",
+      "passed": true,
+      "timeMs": 7952.011916000001
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.Component",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.text.Component",
+      "rawResponse": "net.kyori.adventure.text.Component",
+      "passed": true,
+      "timeMs": 6000.8893339999995
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "rawResponse": "net.kyori.adventure.text.minimessage.MiniMessage",
+      "passed": true,
+      "timeMs": 6995.601417000002
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer",
+      "passed": true,
+      "timeMs": 6657.874500000002
+    },
+    {
+      "benchmarkId": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "rawResponse": "net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer",
+      "passed": true,
+      "timeMs": 5551.689375000002
+    },
+    {
+      "benchmarkId": "net.minestom.server.MinecraftServer",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.MinecraftServer",
+      "rawResponse": "net.minestom.server.MinecraftServer",
+      "passed": true,
+      "timeMs": 4701.393583999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.command.builder.Command",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.command.builder.Command",
+      "rawResponse": "net.minestom.server.command.builder.Command",
+      "passed": true,
+      "timeMs": 6401.681457999999
+    },
+    {
+      "benchmarkId": "net.minestom.server.component.DataComponents",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.component.DataComponent",
+      "rawResponse": "net.minestom.server.component.DataComponent",
+      "passed": false,
+      "timeMs": 55204.546916
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.EntityCreature",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.entity.EntityCreature",
+      "rawResponse": "net.minestom.server.entity.EntityCreature",
+      "passed": true,
+      "timeMs": 11089.424542000008
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.Player",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.entity.Player",
+      "rawResponse": "net.minestom.server.entity.Player",
+      "passed": true,
+      "timeMs": 5248.866500000004
+    },
+    {
+      "benchmarkId": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "rawResponse": "net.minestom.server.entity.metadata.display.TextDisplayMeta",
+      "passed": true,
+      "timeMs": 6145.792459000004
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.EventListener",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.event.EventListener",
+      "rawResponse": "net.minestom.server.event.EventListener",
+      "passed": true,
+      "timeMs": 8149.8380419999885
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "rawResponse": "net.minestom.server.event.inventory.InventoryPreClickEvent",
+      "passed": true,
+      "timeMs": 7140.55454099999
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "rawResponse": "net.minestom.server.event.player.AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 7647.441374999995
+    },
+    {
+      "benchmarkId": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "rawResponse": "net.minestom.server.event.player.PlayerSpawnEvent",
+      "passed": true,
+      "timeMs": 8454.429249999986
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.InstanceContainer",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.instance.InstanceContainer",
+      "rawResponse": "net.minestom.server.instance.InstanceContainer",
+      "passed": true,
+      "timeMs": 7403.353875000001
+    },
+    {
+      "benchmarkId": "net.minestom.server.instance.anvil.AnvilLoader",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.instance.AnvilLoader",
+      "rawResponse": "net.minestom.server.instance.AnvilLoader",
+      "passed": false,
+      "timeMs": 8086.865374999994
+    },
+    {
+      "benchmarkId": "net.minestom.server.item.ItemStack",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.item.ItemStack",
+      "rawResponse": "net.minestom.server.item.ItemStack",
+      "passed": true,
+      "timeMs": 6993.500874999998
+    },
+    {
+      "benchmarkId": "net.minestom.server.inventory.Inventory",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.inventory.Inventory",
+      "rawResponse": "net.minestom.server.inventory.Inventory",
+      "passed": true,
+      "timeMs": 6084.48762499998
+    },
+    {
+      "benchmarkId": "net.minestom.server.scoreboard.Sidebar",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.scoreboard.Sidebar",
+      "rawResponse": "net.minestom.server.scoreboard.Sidebar",
+      "passed": true,
+      "timeMs": 6326.390791999991
+    },
+    {
+      "benchmarkId": "net.minestom.server.tag.Tag",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "net.minestom.server.tag.Tag",
+      "rawResponse": "net.minestom.server.tag.Tag",
+      "passed": true,
+      "timeMs": 9779.837042
+    },
+    {
+      "benchmarkId": "enable-authentication",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "MojangAuth.setOnlineMode(true);",
+      "rawResponse": "MojangAuth.setOnlineMode(true);",
+      "passed": false,
+      "timeMs": 33393.336584000004
+    },
+    {
+      "benchmarkId": "configuration-phase-event",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "AsyncPlayerConfigurationEvent",
+      "rawResponse": "AsyncPlayerConfigurationEvent",
+      "passed": true,
+      "timeMs": 9707.318041999999
+    },
+    {
+      "benchmarkId": "gamemode-change-event",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "AsyncPlayerConfigurationEvent",
+      "rawResponse": "AsyncPlayerConfigurationEvent",
+      "passed": false,
+      "timeMs": 37115.68070900001
+    },
+    {
+      "benchmarkId": "motd-event",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "ServerListPingEvent",
+      "rawResponse": "ServerListPingEvent",
+      "passed": true,
+      "timeMs": 5553.522541000042
+    },
+    {
+      "benchmarkId": "player-head-skin-component",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "ItemComponent.PROFILE",
+      "rawResponse": "ItemComponent.PROFILE",
+      "passed": false,
+      "timeMs": 13159.582750000001
+    },
+    {
+      "benchmarkId": "enable-lighting",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "instance.setChunkSupplier(LightingChunk::new);",
+      "rawResponse": "instance.setChunkSupplier(LightingChunk::new);",
+      "passed": true,
+      "timeMs": 43770.07820799999
+    },
+    {
+      "benchmarkId": "join-components-method",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "Component.join",
+      "rawResponse": "Component.join",
+      "passed": false,
+      "timeMs": 29233.23125000001
+    },
+    {
+      "benchmarkId": "blockvec",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "Vec",
+      "rawResponse": "Vec",
+      "passed": false,
+      "timeMs": 22878.808917000017
+    },
+    {
+      "benchmarkId": "holograms",
+      "modelName": "google/gemini-3-pro-preview",
+      "response": "EntityType.TEXT_DISPLAY",
+      "rawResponse": "EntityType.TEXT_DISPLAY",
+      "passed": true,
+      "timeMs": 6428.763624999963
     }
   ],
-  "lastUpdated": "2025-10-27T04:39:27.421Z"
+  "lastUpdated": "2025-11-18T16:30:29.451Z"
 }
